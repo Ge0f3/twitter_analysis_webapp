@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Twitter analytics web app</title>
+	<link rel="icon" type="image" href="images/twitter_logo.png">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+<div class="jumbotron text-center " id="default">
+	<h1>Twitter Sentimental analysis</h1>
+	<p id="heading">Hi..! lets Search for a # in twitter and analyze</p>
+</div>
+<div id="header" >
+<center>
+	<input type="text" name="input" id='tag' placeholder="Search for a #">
+	<button type="button" class="btn btn-primary btn-lg active" onclick="change()">Analyze</button>
+	</center>
+</div>
+<h1 id="view"></h1>
+<script type="text/javascript">
+	function change(){
+		tag=document.getElementById('tag').value
+		document.getElementById('view').innerHTML="The tag your searching is "+tag;
+	}
+</script>
+</body>
+</html>
