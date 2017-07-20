@@ -1,0 +1,21 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<div class="jumbotron text-center " id="default">
+	<h1>Twitter Sentimental analysis</h1>
+	<p id="heading">Hi..! lets Search for # in twitter and analyze</p>
+</div>
+<div id="header" >
+<center>
+	<input type="text" name="input" id='tag' placeholder="Search for a #">
+	<button type="button" class="btn btn-primary btn-lg active" onclick="change()">Analyze</button>
+	</center>
+</div>
+<h1 id="view"></h1>
+<script type="text/javascript">
+	function change(){
+		tag=document.getElementById('tag').value
+		document.getElementById('view').innerHTML="The tag your searching is "+tag;
+	}
+</script>
+{% endblock %}
