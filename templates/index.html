@@ -1,6 +1,7 @@
 {% extends 'layout.html'%}
 
 {% block body %}
+<div class="block" ng-app="mymodule" >
 <div class="jumbotron text-center " id="default">
 	<h1>Twitter Sentimental analysis</h1>
 	<p id="heading">Hi..! lets Search for # in twitter and analyze</p>
@@ -10,12 +11,39 @@
 	<input type="text" name="input" id='tag' placeholder="Search for a #">
 	<button type="button" class="btn btn-primary btn-lg active" onclick="change()">Analyze</button>
 	</center>
+	<br>
+	<center><button class="btn btn-success" onclick="sayhello()"> Say Hello !!</button></center>
 </div>
-<h1 id="view"></h1>
 <script type="text/javascript">
 	function change(){
 		tag=document.getElementById('tag').value
-		document.getElementById('view').innerHTML="The tag your searching is "+tag;
+		document.getElementById('view').innerHTML="The tag your searching is <span style='color:#03a9f4' >"+tag;
 	}
 </script>
+<div ng-controller="myController">
+    <h3 id="view">50 + 20 is {{50+20}} and The message is {{message}} </h3>
+</div>
+
+<fieldset>
+	<legend><h2><b><span style="color:#8F8F8F">Ana</span><span style="color:#03a9f4" ">lysis:</span></b></h2> </legend>
+
+	<table class="table table-inverse">
+		<thead class="thead-inverse">
+		<tr>
+			<th>Count #</th>
+			<th>Tweet</th>
+			<th> Sentimental Value</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<th scope="row">2</th>
+			<td>Tweet No 1</td>
+			<td>+0.23 </td>
+		</tr>
+		</tbody>
+
+	</table>
+</fieldset>
+</div>
 {% endblock %}

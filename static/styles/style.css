@@ -7,6 +7,9 @@ header{
     padding-bottom: 10px;
 
 }
+span.blue{
+    color:#03a9f4;
+}
 input[type=text]{
 	width: 170px;
 	box-sizing: border-box;
@@ -22,6 +25,7 @@ input[type=text]{
 input[type=text]:focus{
 	width: 50%
 }
+
 #default{
 	padding-top: 24px;
 	padding-bottom: 12px;
